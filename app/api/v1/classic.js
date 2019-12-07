@@ -7,6 +7,8 @@ router.post("/v1/:id/classic/latest", (ctx, next) => {
   const headers = ctx.request.header;
   const body = ctx.request.body;
   ctx.body = { key: "classic" };
+
+  throw new Error("API Exception");
 });
 
 module.exports = router;
