@@ -5,9 +5,13 @@ const catchError = async (ctx, next) => {
     await next();
   } catch (error) {
     // 开发环境
-    if (global.config.enviroment === "dev") {
+    const isHttpException = error instanceof HttpException;
+    const isDev = global.config.environment === "dev";
+
+    if (isDev && !isHttpException) {
       throw error;
     }
+
     if (error instanceof HttpException) {
       //已知错误
       ctx.body = {
