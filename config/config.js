@@ -1,10 +1,10 @@
 module.exports = {
   enviroment: "dev",
   database: {
-    dbName: "wey",
+    dbName: "cfsl",
     host: "localhost",
     port: 3306,
     user: "root",
-    password: "123456"
+    password: ""
   }
 };
