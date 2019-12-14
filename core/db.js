@@ -21,12 +21,12 @@ const sequelize = new Sequelize(dbName, user, password, {
     createdAt: "created_at",
     updatedAt: "updated_at",
     deletedAt: "deleted_at",
-    underscored: true,
+    underscored: false
   }
 });
 
 sequelize.sync({
-  force: true
+  force: false
 });
 
 module.exports = {
