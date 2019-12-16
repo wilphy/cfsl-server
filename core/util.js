@@ -51,14 +51,10 @@ const generateToken = function(uid, scope){
     return token
 }
 
-
-
 module.exports = {
     findMembers,
     generateToken,
 }
-
-
 
 // const generateToken = function (uid, scope) {
 //     const secretKey = global.config.security.secretKey

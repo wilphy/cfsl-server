@@ -6,5 +6,9 @@ module.exports = {
     port: 3306,
     user: "root",
     password: ""
+  },
+  security: {
+    secretKey: "cgamemf",
+    expiresIn: 60 * 60 * 24 * 30
   }
 };
